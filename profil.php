@@ -5,7 +5,9 @@ login et son mot de passe. -->
 
 <?php
 
+
 session_start();
+
 include 'connect.php' ;
 
 
@@ -15,11 +17,12 @@ if(isset($_POST['login'])&& isset($_POST['password'])&&  isset($_POST['confirmep
 
 
 { 
-$id = $_SESSION['userconnect']['id'];
+
+
 $login = $_POST['login']; 
 $password = $_POST['password']; 
 $password_confirme = $_POST['confirmepassword'];
-
+$id = $_SESSION['userconnect']['id'];
 
 
 if ($password != $password_confirme) {
@@ -42,51 +45,46 @@ else {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style1.css"> 
+    <link rel="stylesheet" type="text/css" href="style.css"> 
     
     <title>Profil</title>
 
 </head>
 <body class="bodyprofil">
 
-<h1 class="h1profil">Bienvenu sur ton profil !</h1>
+        <h1 class="h1profil">Bienvenu sur ton profil !</h1>
 
-<div class="box-a">
-<div class="inscri">
+    <form  method="post" action="profil.php" class="form" >
+            <table>
 
+                <tr>
+                    <td>Login</td>
+                    <td><input type="text" name="login" value = "<?php echo $_SESSION['userconnect']['login'];?>"></td>
+                </tr>
+                <tr>
+                    <td>Mot de Passe</td>
+                    <td><input type="password" name="password" value = "<?php echo $_SESSION['userconnect']['password'];?>"></td>
+                </tr>
+                <tr>
+                    <td>Confirmer Mot de Passe</td>
+                    <td><input type="password" name="confirmepassword"></td>
+                </tr>
 
-<form  method="post" action="profil.php" class="form" >
+            </table>
 
-        <table>
-            <tr>
-                <td>Login</td>
-                <td><input type="text" name="login" value = "<?php echo $_SESSION['userconnect']['login'];?>"></td>
-            </tr>
-            <tr>
-                <td>Mot de Passe</td>
-                <td><input type="password" name="password" value = "<?php echo $_SESSION['userconnect']['password'];?>"></td>
-            </tr>
-            <tr>
-                <td>Confirmer Mot de Passe</td>
-                <td><input type="password" name="confirmepassword"></td>
-            </tr>
-        </table>
+                    <div id="button">
+                    <input type="submit"value="Modifier">
+                    </div>  
 
-        <div id="button">
-                <input type="submit"value="Modifier">
-                </div>  
+                    
+                    <?php
+                    echo "<p class='msg'>". $message. '</p>' ;
+                    ?>
+    </form>
 
-                
-                <?php
-                echo "<p class='msg'>". $message. '</p>' ;
-                ?>
-
-</form>
-
-</div>
-
-<h2 class="h2profil"> <a href="deconnexion.php">Déconnexion</a> </h2>
-</div>
+                </div>
+                <h2 class="h2profil"> <a href="deconnexion.php">Déconnexion</a> </h2>
+                </div>
 
 
 </body>

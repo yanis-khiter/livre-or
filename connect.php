@@ -7,8 +7,7 @@
 // $bdd = mysqli_connect('localhost', '', '', ''); 
 
 // MA BASE LOCALE
-$bdd = mysqli_connect('localhost', 'root', '', 'livreor'); // 
-
+$bdd = mysqli_connect('localhost', 'root', '', 'livreor'); 
 mysqli_set_charset($bdd , 'utf8');
 
 

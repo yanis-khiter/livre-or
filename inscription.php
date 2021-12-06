@@ -1,6 +1,13 @@
+
+<!-- - Une page contenant un formulaire d’inscription (inscription.php) :
+
+Le formulaire doit contenir l’ensemble des champs présents dans la table
+“utilisateurs” (sauf “id”) ainsi qu’une confirmation de mot de passe. Dès
+qu’un utilisateur remplit ce formulaire, les données sont insérées dans la
+base de données et l’utilisateur est redirigé vers la page de connexion. -->
+
 <?php
 
-session_start();
 include 'connect.php' ;
 
 $message = '';
@@ -44,50 +51,54 @@ $resultat = mysqli_fetch_all($requete);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mondule d'inscription</title>
-    <link rel="stylesheet" type="text/css" href="style1.css"> 
+    <title>Inscription</title>
+    <link rel="stylesheet" type="text/css" href="style.css"> 
 
 </head>
-<body>
+<body class="body-inscription">
 
-<div class="box-a">
-    <div class="inscri">  
 
-        <h1>Inscrivez-vous</h1>
+<h1 class="h1inscr">Inscription</h1>
+        
+    <div class="inscri"> 
 
-        <p>Inscrivez-vous. Sinon <a href="connexion.php"> connectez-vous.</a></p>
+        <p class="p">Inscrivez-vous. Sinon<a href="connexion.php"> connectez-vous.</a></p>
 
-        <form method="post" action="inscription.php" class="form" >
+            <form method="post" action="inscription.php" class="form" >
 
-            <table>
-                <tr>
-                    <td>Login</td>
-                    <td><input type="text" name="login" placeholder='Exemple : "Yanis13..."'></td>
-                </tr>
-                <tr>
-                    <td>Mot de Passe</td>
-                    <td><input type="password" name="password" placeholder='Exemple : "****..."'></td>
-                </tr>
-                <tr>
-                    <td>Confirmer Mot de Passe</td>
-                    <td><input type="password" name="confirmepassword" placeholder='Exemple : "****..."'></td>
-                </tr>
-            </table>
+                    <table>
 
-                <div id="button">
-                <input type="submit"value="S'inscrire">
-                </div>  
+                        <tr>
+                            <td>Login</td>
+                            <td><input type="text" name="login" placeholder='Exemple : "Yanis13..."' required></td>
+                        </tr>
+                        <tr>
+                            <td>Mot de Passe</td>
+                            <td><input type="password" name="password" placeholder='Exemple : "****..."' required></td>
+                        </tr>
+                        <tr>
+                            <td>Confirmer Mot de Passe</td>
+                            <td><input type="password" name="confirmepassword" placeholder='Exemple : "****..."' required></td>
+                        </tr>
 
-                <?php
-                echo "<p class='msg'>". $message. '</p>' ;
-                ?>
+                    </table>
 
-        </form>
+                        <div id="button">
+                        <input type="submit"value="S'inscrire">
+                        </div>  
+
+                        <?php
+                        echo "<p class='msg'>". $message. '</p>' ;
+                        ?>
+
+            </form>
+   
+            <div>
+            <h2 class="h2inscri"> <a id="a-inscrini" href="index.php">Page d'accueil</a> </h2>
+            </div>
     </div>
-</div>
 
-
-
+       
 
 </body>
 </html>

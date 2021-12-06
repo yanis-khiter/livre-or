@@ -1,3 +1,81 @@
-.h1index {
-    text-align: center;
+
+/******* CSS INDEX ******/
+
+html {
+font-family: Tahoma;
 }
+
+.bodyindex {
+background: url(cheval.jpg);
+background-size: cover;
+}
+
+.h1index {
+text-align: center;
+text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff, 1px 1px 10px #141414;
+color:rgb(104, 6, 44);
+font-size: 50px;
+}
+
+.h2index {
+text-align: center;
+margin-top: 2%;
+font-family: 'Segoe UI';
+color:rgb(104, 6, 44);
+font-size: 25px;
+
+}
+
+.a-index{
+text-decoration: none;
+color:rgb(255, 51, 0);
+}
+
+
+
+/******* CSS INSCRIPTION ******/
+
+.body-inscription {
+background: url(white.jpg);
+background-size: cover;
+}
+
+.inscri {
+margin-left: 60%;
+margin-top: 5%;
+}
+
+.h1inscr {
+    margin-left: 60%;
+    margin-bottom: -3%;
+
+}
+
+
+
+/******* CSS CONNEXION ******/
+
+
+.body-connexion {
+    background: url(whitereverse.png);
+    background-size: cover;
+    }
+
+
+
+    
+/******* CSS PROFIL ******/
+
+
+
+
+
+
+/******* CSS LIVREDOR ******/
+
+
+
+
+
+
+/******* CSS COMMENTAIRE ******/

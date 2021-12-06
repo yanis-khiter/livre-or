@@ -8,15 +8,13 @@
     
     <title>Page d'accueil</title>
 
-    <h1 class="h1index">PRECIOSYS</h1>
-
 </head>
-<body class="bodyaccueil">
+<body class="bodyindex">
 
-<h1 class="h1accueil">Bienvenu !</h1>
+<h1 class="h1index">BIENVENUE COW-BOY !</h1>
 
-<h2  class="h2accueil">Prêt à être bg ? Pour cela : <a class="" href="inscription.php"> Inscris-toi.</a> Si c'est déjà fait : 
-<a class='' href="connexion.php">Connectes-toi !</a></h2>
+<h2  class="h2index">Prêt à chevaucher mon livre d'or à travers les plaines du Far-West ? Pour cela <a class="a-index" href="inscription.php"> inscris-toi.</a> Si c'est déjà fait alors 
+<a class="a-index" href="connexion.php">connectes-toi !</a></h2>
 
 </body>
 </html>

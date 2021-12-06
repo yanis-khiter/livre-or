@@ -32,7 +32,7 @@ else {
         $sql="UPDATE `utilisateurs` SET `login`='$login',`password`='$password' WHERE `id`= '$id' ";
         $requete= mysqli_query($bdd, $sql);
                 
-        header('Location: index.php');
+        header('Location: livre-or.php');
 }
 }
 

@@ -42,8 +42,8 @@ $resultat = mysqli_fetch_all($requete);
 }
 }
 
-
 ?>   
+
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -54,51 +54,33 @@ $resultat = mysqli_fetch_all($requete);
     <title>Inscription</title>
     <link rel="stylesheet" type="text/css" href="style.css"> 
 
+
 </head>
-<body class="body-inscription">
+
+<div class="boxy">
 
 
-<h1 class="h1inscr">Inscription</h1>
-        
-    <div class="inscri"> 
+        <h1 class="h1inscr">Inscription</h1>
 
-        <p class="p">Inscrivez-vous. Sinon<a href="connexion.php"> connectez-vous.</a></p>
+        <p class="p">Hey Cow-Boy ! prêt à chevaucher ? Alors inscris-toi  <br> Sinon <a href="connexion.php"> connectes-toi.</a></p>
 
-            <form method="post" action="inscription.php" class="form" >
+        <form method="post" action="inscription.php" class="form" >
 
-                    <table>
+            <input type="text" name="login" placeholder='Login : "Arthur"' required><br>
+            <input type="password" name="password" placeholder='Mot de passe : *****' required><br>
+            <input type="password" name="confirmepassword" placeholder='Confirmation : *****' required><br>
 
-                        <tr>
-                            <td>Login</td>
-                            <td><input type="text" name="login" placeholder='Exemple : "Yanis13..."' required></td>
-                        </tr>
-                        <tr>
-                            <td>Mot de Passe</td>
-                            <td><input type="password" name="password" placeholder='Exemple : "****..."' required></td>
-                        </tr>
-                        <tr>
-                            <td>Confirmer Mot de Passe</td>
-                            <td><input type="password" name="confirmepassword" placeholder='Exemple : "****..."' required></td>
-                        </tr>
-
-                    </table>
-
-                        <div id="button">
-                        <input type="submit"value="S'inscrire">
-                        </div>  
+                <div id="button">
+                <input type="button" value="S'inscrire"><br>
+                </div>  
 
                         <?php
                         echo "<p class='msg'>". $message. '</p>' ;
                         ?>
+        </form>
 
-            </form>
-   
-            <div>
-            <h2 class="h2inscri"> <a id="a-inscrini" href="index.php">Page d'accueil</a> </h2>
-            </div>
     </div>
 
-       
 
 </body>
-</html>
+</html> 

@@ -1,6 +1,4 @@
-
 <!-- - Une page contenant un formulaire d’inscription (inscription.php) :
-
 Le formulaire doit contenir l’ensemble des champs présents dans la table
 “utilisateurs” (sauf “id”) ainsi qu’une confirmation de mot de passe. Dès
 qu’un utilisateur remplit ce formulaire, les données sont insérées dans la
@@ -37,7 +35,7 @@ $resultat = mysqli_fetch_all($requete);
 
     $requete = mysqli_query($bdd, "INSERT INTO utilisateurs(login, password) VALUES ('$login','$password') ");
 
-    header('Location: connexion.php');
+   header('Location: connexion.php');
 
 }
 }
@@ -57,12 +55,15 @@ $resultat = mysqli_fetch_all($requete);
 
 </head>
 
-<div class="boxy">
+<body class="bodyinscri">
 
+<div class="box-a"></div>
 
-        <h1 class="h1inscr">Inscription</h1>
+        <div class="boxy">
 
-        <p class="p">Hey Cow-Boy ! prêt à chevaucher ? Alors inscris-toi  <br> Sinon <a href="connexion.php"> connectes-toi.</a></p>
+        <h1 class="h1inscri">Inscription</h1>
+
+        <h2 class="h2inscri">Hey Cow-Boy ! prêt à chevaucher ? Alors inscris-toi.  <br> Sinon <a class="a-inscri" href="connexion.php"> connectes-toi.</a></p>
 
         <form method="post" action="inscription.php" class="form" >
 
@@ -70,16 +71,16 @@ $resultat = mysqli_fetch_all($requete);
             <input type="password" name="password" placeholder='Mot de passe : *****' required><br>
             <input type="password" name="confirmepassword" placeholder='Confirmation : *****' required><br>
 
-                <div id="button">
-                <input type="button" value="S'inscrire"><br>
-                </div>  
-
                         <?php
                         echo "<p class='msg'>". $message. '</p>' ;
                         ?>
         </form>
 
     </div>
+
+    <div id="button">
+    <input class="inputinscri" type="submit" value="S'inscrire"><br>
+    </div>  
 
 
 </body>

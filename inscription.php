@@ -57,31 +57,40 @@ $resultat = mysqli_fetch_all($requete);
 
 <body class="bodyinscri">
 
-<div class="box-a"></div>
+<header>
+    <?php include 'header.php'; ?>
+</header>
 
-        <div class="boxy">
-
+<div class="box-a">
+    <div class="boxy">
         <h1 class="h1inscri">Inscription</h1>
+            <h2 class="h2inscri">Je te laisse t'inscrire Cow-Boy ! <br> Sinon <a class="a-inscri" href="connexion.php"> connectes-toi.</a></h2>
+                
+                <form method="post" action="inscription.php" class="form" >
 
-        <h2 class="h2inscri">Hey Cow-Boy ! prêt à chevaucher ? Alors inscris-toi.  <br> Sinon <a class="a-inscri" href="connexion.php"> connectes-toi.</a></p>
+                    <input type="text" name="login" placeholder='Login : "Arthur"' required><br>
+                    <input type="password" name="password" placeholder='Mot de passe : *****' required><br>
+                    <input type="password" name="confirmepassword" placeholder='Confirmation : *****' required><br>
 
-        <form method="post" action="inscription.php" class="form" >
-
-            <input type="text" name="login" placeholder='Login : "Arthur"' required><br>
-            <input type="password" name="password" placeholder='Mot de passe : *****' required><br>
-            <input type="password" name="confirmepassword" placeholder='Confirmation : *****' required><br>
 
                         <?php
                         echo "<p class='msg'>". $message. '</p>' ;
                         ?>
-        </form>
 
+
+                        <div id="buttoninscri">
+                        <input class="inputinscri" type="submit" value="Se connecter">
+                        </div> 
+
+                 </form>
+
+            
     </div>
+</div>
 
-    <div id="button">
-    <input class="inputinscri" type="submit" value="S'inscrire"><br>
-    </div>  
+   
 
+               
 
 </body>
 </html> 

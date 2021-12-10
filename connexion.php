@@ -32,6 +32,9 @@ if(!empty($resultat)) {
       'login' => $resultat['login'],
       'password' => $resultat['password'],
     ];
+    $_SESSION['id'] = $resultat['id'];
+    $_SESSION['login'] = $resultat['login'];
+    $_SESSION['password'] = $resultat['password'];
 
     if($resultat['login']==$login) {
 }
@@ -72,6 +75,10 @@ $message = '<br>'.'Utilisateur inconnu ! '; }
 
 <div class="box-b"></div>
 
+    <header>
+    <?php include 'header.php'; ?>
+    </header>
+
         <div class="conni">
 
             <h1 class="h1conn">Connexion</h1>
@@ -86,21 +93,15 @@ $message = '<br>'.'Utilisateur inconnu ! '; }
                 echo "<p class='msg'>". $message. '</p>' ;
                 ?>
 
+            <div id="buttoncon">
+            <input class="inputconni" type="submit"value="Se connecter">
+            </div> 
+
         </form>
  
     </div> 
 
-            <div id="buttoncon">
-            <input class="inputconni" type="submit"value="Se connecter">
-            </div>  
-
-
-            <!-- <div class="redi">
-
-            <h2 class="h22"> <a id="a-connect" href="index.php">Page d'accueil</a> </h2>
-            <h2 class="h22"><a id="a-connect" href="inscription.php">Inscription</a></h2>
-
-            </div> -->
+        
 
   
 

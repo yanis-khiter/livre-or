@@ -1,3 +1,38 @@
+/*********HEADEEER ********/
+
+ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color: #333;
+}
+
+li {
+float: left;
+border-right:1px solid #bbb;
+}
+
+li:last-child {
+border-right: none;
+}
+
+li a {
+display: block;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
+
+li a:hover:not(.active) {
+background-color: #111;
+}
+
+.active {
+background-color: rgb(184, 52, 52);
+}
+
 
 /******* CSS INDEX ******/
 
@@ -36,9 +71,8 @@ background: url(white.jpg);
 background-size: cover;
 }
 
-.box-a {
-margin-top: 4%;
-}
+.box-a {}
+
 
 
 .boxy {
@@ -81,15 +115,13 @@ background: rgba(0, 0, 0, 0.3);
 padding: 3rem;
 height: 200px;
 border-radius: 0px;
-border-left: 1px solid rgba(0, 0, 0, 0.3);
-border-top: 1px solid rgba(0, 0, 0, 0.3);
 backdrop-filter: blur(10px);
 -webkit-backdrop-filter: blur(10px);
 -moz-backdrop-filter: blur(10px);
 box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, .2);
 text-align: center;
-border-radius: 20px;
-margin-top: 5%;
+border-radius: 30px;
+
 }
 
 input {
@@ -130,17 +162,17 @@ color: #fff;
 }
 
 
-#button {
-margin-top: 1%;
-margin-left: 68%;
+#buttoninscri {
+margin-left: 5%;
+margin-top: 15%;
 }
+
 
 .inputinscri {
 color: rgb(184, 52, 52);
 font-family: Impact;
 font-size: 20px;
 }
-
 
 
 
@@ -177,31 +209,21 @@ color: red;
 }
 
 .inputconni {
-    color: rgb(128, 17, 17);
-    font-family: Impact;
-    font-size: 20px;
-    }
+color: rgb(128, 17, 17);
+font-family: Impact;
+font-size: 20px;
+}
 
 #buttoncon {
 margin-top: 1%;
 margin-left: 17%;
-
 }
-
 
 
 /******* CSS PROFIL ******/
 
 
-
-
-
-
 /******* CSS LIVREDOR ******/
-
-
-
-
 
 
 /******* CSS COMMENTAIRE ******/

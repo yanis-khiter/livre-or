@@ -31,7 +31,7 @@ else {
         $sql="UPDATE `utilisateurs` SET `login`='$login',`password`='$password' WHERE `id`= '$id' ";
         $requete= mysqli_query($bdd, $sql);
                 
-        header('Location: livre-or.php');
+        header('Location: commentaire.php');
 }
 }
 
@@ -50,6 +50,10 @@ else {
 
 </head>
 <body class="bodyprofil">
+
+<header>
+    <?php include 'header.php'; ?>
+</header>
 
         <h1 class="h1profil">Bienvenu sur ton profil !</h1>
 
@@ -81,9 +85,6 @@ else {
                     ?>
     </form>
 
-                </div>
-                <h2 class="h2profil"> <a href="deconnexion.php">Déconnexion</a> </h2>
-                </div>
 
 
 </body>

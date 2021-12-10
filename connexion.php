@@ -68,16 +68,15 @@ $message = '<br>'.'Utilisateur inconnu ! '; }
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connexion</title>
     <link rel="stylesheet" type="text/css" href="style.css"> 
-
 </head>
 
 <body class="bodyconni">
 
-<div class="box-b"></div>
+<?php include 'header.php'; ?>
 
-    <header>
-    <?php include 'header.php'; ?>
-    </header>
+<main>
+
+<div class="box-b"></div>
 
         <div class="conni">
 
@@ -101,7 +100,9 @@ $message = '<br>'.'Utilisateur inconnu ! '; }
  
     </div> 
 
-        
+</main>
+
+
 
   
 

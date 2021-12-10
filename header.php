@@ -1,23 +1,28 @@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-</head>
-<body>
-
+<header>
 <ul>
 
   <li><a href="index.php" class="active">Page d'accueil</a></li>
-  <li><a href="inscription.php">Inscription</a></li>
-  <li><a href="livre-or.php">Livre d'or</a></li>
-  <li style="float:right"><a href="deconnexion.php">Deconnexion</a></li>
+  <li><a href="livre-or.php">Livre dor</a></li>
+
+
+
+  <?php
+
+if(isset(  $_SESSION['userconnect'])) {
+    echo'<li><a href="commentaire.php">Commentaire</a></li>';
+    echo' <li><a href="profil.php">Profil</a></li>';
+    echo '<li style="float:right"><a href="deconnexion.php">Deconnexion</a></li>';
+
+} else {
+    echo '<li><a href="inscription.php">Inscription</a></li>';
+    echo '<li><a href="connexion.php">Connexion</a></li>';
+}
+
+  ?>
 
 </ul>
 
+</header>
+
     
-</body>
-</html>

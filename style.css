@@ -1,4 +1,4 @@
-/*********HEADEEER ********/
+/********* HEADER ********/
 
 ul {
 list-style-type: none;
@@ -34,7 +34,7 @@ background-color: rgb(184, 52, 52);
 }
 
 
-/******* CSS INDEX ******/
+/******* INDEX ******/
 
 html {
 font-family: Tahoma;
@@ -64,16 +64,12 @@ color: rgb(184, 52, 52);
 }
 
 
-/******* CSS INSCRIPTION ******/
+/******* INSCRIPTION ******/
 
 .bodyinscri {
 background: url(white.jpg);
 background-size: cover;
 }
-
-.box-a {}
-
-
 
 .boxy {
 padding: 20px;
@@ -176,8 +172,7 @@ font-size: 20px;
 
 
 
-
-/******* CSS CONNEXION ******/
+/******* CONNEXION ******/
 
 
 .bodyconni{
@@ -220,10 +215,13 @@ margin-left: 17%;
 }
 
 
-/******* CSS PROFIL ******/
+/******* PROFIL ******/
 
 
-/******* CSS LIVREDOR ******/
+/******* LIVREDOR ******/
 
 
-/******* CSS COMMENTAIRE ******/
+/******* COMMENTAIRE ******/
+    
+
+/********* FOOTER ********/

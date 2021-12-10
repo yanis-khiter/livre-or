@@ -51,15 +51,14 @@ $resultat = mysqli_fetch_all($requete);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscription</title>
     <link rel="stylesheet" type="text/css" href="style.css"> 
-
-
 </head>
+
 
 <body class="bodyinscri">
 
-<header>
-    <?php include 'header.php'; ?>
-</header>
+<?php include 'header.php'; ?>
+
+<main>
 
 <div class="box-a">
     <div class="boxy">
@@ -90,7 +89,7 @@ $resultat = mysqli_fetch_all($requete);
 
    
 
-               
+</main>           
 
 </body>
 </html> 

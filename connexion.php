@@ -81,9 +81,10 @@ $message = '<br>'.'Utilisateur inconnu ! '; }
         <div class="conni">
 
             <h1 class="h1conn">Connexion</h1>
+            <h2 class="h2conn">Place à la connexion Sherif ! </h2>
 
             
-        <form method ="post" action = "connexion.php" class="form" >
+        <form method ="post" action = "connexion.php" class="form-con" >
 
             <input type="text" name="login" placeholder='Login : "Arthur"' required><br>
             <input type="password" name="password" placeholder='Mot de passe : *****' required><br>

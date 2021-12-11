@@ -47,7 +47,7 @@ if (!empty($_POST['comment'])) {
 
 </head>
 
-<body>
+<body class="bodycomm">
     
 <header>
     <?php include 'header.php'; ?>
@@ -64,15 +64,13 @@ if (!empty($_POST['comment'])) {
                     <textarea id="comment" name="comment" placeholder="Tapez ici votre commentaire..." required></textarea>
                 </div>
 
-            <div class="input-group">
-            <button name="submit" class="btn">Commenter</button>
-            </div>
-
         </form>
 
+        <div class="input-group">
+            <button name="submit" class="btn">Commenter</button>
+            </div>
+            
     </div>
-    
-    <button type="submit" name="deconnexion">Déconnexion</button>
 
 </body>
 

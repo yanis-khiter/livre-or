@@ -63,9 +63,9 @@ $resultat = mysqli_fetch_all($requete);
 <div class="box-a">
     <div class="boxy">
         <h1 class="h1inscri">Inscription</h1>
-            <h2 class="h2inscri">Je te laisse t'inscrire Cow-Boy ! <br> Sinon <a class="a-inscri" href="connexion.php"> connectes-toi.</a></h2>
+            <h2 class="h2inscri">Je te laisse t'inscrire Cow-Boy ! </h2>
                 
-                <form method="post" action="inscription.php" class="form" >
+                <form method="post" action="inscription.php" class="form-inscri" >
 
                     <input type="text" name="login" placeholder='Login : "Arthur"' required><br>
                     <input type="password" name="password" placeholder='Mot de passe : *****' required><br>
@@ -78,7 +78,7 @@ $resultat = mysqli_fetch_all($requete);
 
 
                         <div id="buttoninscri">
-                        <input class="inputinscri" type="submit" value="Se connecter">
+                        <input class="inputinscri" type="submit" value="S'inscrire">
                         </div> 
 
                  </form>

@@ -47,7 +47,7 @@ background-size: cover;
 
 .h1index {
 text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff, 1px 1px 10px #141414;
-color: rgb(184, 52, 52);
+color: rgb(97, 21, 53);
 font-size: 50px;
 font-family: 'tahoma';
 margin-top: 3%;
@@ -60,7 +60,11 @@ margin-top: 2%;
 
 .a-index{
 text-decoration: none;
-color: rgb(184, 52, 52);
+color: rgb(97, 21, 53);
+}
+
+.h2ind{
+    text-align: center;
 }
 
 
@@ -79,18 +83,24 @@ border-radius: 20px;
 margin-right: 8%;
 }
 
+.box-a {
+    margin-top: 4%;
+}
+
 .h1inscri{
+    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff, 1px 1px 10px #141414;
+    color: rgb(184, 52, 52);
+    font-size: 40px;
+    font-family: 'tahoma';
+    margin-top: 3%;
+    text-align: center;
+    }
+
+
+.h2inscri {
 font-family: 'tahoma';
 text-align: center;
-
 }
-.h2inscri {
-text-align: center;
-margin-top: 5%;
-font-size: 20px;
-font-family: arial;
-}
-
 
 .a-inscri {
 text-decoration: none;
@@ -99,10 +109,6 @@ color: rgb(184, 52, 52);
 
 a:hover {
 text-shadow: 2px 2px 6px #00000040;
-}
-
-a:active {
-text-shadow: none;
 }
 
 
@@ -180,6 +186,19 @@ background: url(whitereverse.png);
 background-size: cover;
 }
 
+.form-con {
+background: rgba(0, 0, 0, 0.3);
+padding: 3rem;
+height: 145px;
+border-radius: 0px;
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
+-moz-backdrop-filter: blur(10px);
+box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, .2);
+text-align: center;
+border-radius: 30px;
+}
+
 .box-b {
 margin-top: 6%;
 }
@@ -194,34 +213,138 @@ margin-left: 3%;
 }
 
 .h1conn{
-font-family: 'tahoma';
-text-align: center;
+    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff, 1px 1px 10px #141414;
+    color: rgb(184, 52, 52);
+    font-size: 40px;
+    font-family: 'tahoma';
+    margin-top: 3%;
+    text-align: center;
 }
+
+.h2conn {
+    text-align: center;
+    font-family: 'tahoma';
+    margin-top: 5%;
+    font-size: 25px;
+
+    }
 
 .b-inscri {
 text-decoration: none;
 color: red;
 }
 
-.inputconni {
-color: rgb(128, 17, 17);
-font-family: Impact;
-font-size: 20px;
-}
-
 #buttoncon {
-margin-top: 1%;
-margin-left: 17%;
-}
-
+    margin-left: 5%;
+    margin-top: 18%;
+    }
+    
+    
+    .inputconni {
+    color: rgb(184, 52, 52);
+    font-family: Impact;
+    font-size: 20px;
+    }
 
 /******* PROFIL ******/
 
+.bodyprof {
+    background: url(cb.jpg);
+    background-size: cover;
+}
+
+.box-p {
+    margin-top: 4%;
+    margin-right: 8%;
+}
+
+
+.profi {
+    padding: 20px;
+    margin-left: 55%;
+    background: rgba(201, 201, 211, 0.5);
+    border-radius: 20px;
+    margin-right: 8%;
+    }
+    
+    .h1profil{
+        text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff, 1px 1px 10px #141414;
+        color: rgb(184, 171, 52);
+        font-size: 40px;
+        font-family: 'tahoma';
+        margin-top: 3%;
+        text-align: center;
+    }
+
+    .h2prof {
+        text-align: center;
+        font-family: 'tahoma';
+        margin-top: 5%;
+        font-size: 23px;
+    }
+    
+    .p-profi {
+    text-decoration: none;
+    color: rgb(184, 52, 52);
+    }
+     
+
+    ::placeholder {
+    color: #fff;
+    }
+    
+    
+    #buttonpro {
+        margin-left: 5%;
+        margin-top: 18%;
+        }
+        
+        
+        .inputpro {
+            color: rgb(184, 52, 52);
+        font-family: Impact;
+        font-size: 20px;
+        }
+    
 
 /******* LIVREDOR ******/
 
+.bodylivre {
+background: url(old.jpg);
+background-size: cover;
+}
+
+.h1livre {
+    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff, 1px 1px 10px #141414;
+    color: rgb(187, 71, 18);
+    font-size: 60px;
+    font-family: 'tahoma';
+    margin-top: 3%;
+    text-align: center;
+}
+
+.all-livre {
+font-family: Tahoma;
+text-align: center;
+
+}
+
+.livreor {
+font-style: italic;
+font-style: bold;
+color: rgb(255, 255, 255);
+}
+
+
 
 /******* COMMENTAIRE ******/
-    
+
+.bodycomm {
+background: url(cow.jpg);
+background-size: cover;
+
+
+}
+
 
 /********* FOOTER ********/

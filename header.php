@@ -3,7 +3,7 @@
 <ul>
 
   <li><a href="index.php" class="active">Page d'accueil</a></li>
-  <li><a href="livre-or.php">Livre dor</a></li>
+  <li><a href="livre-or.php">Livre d'or</a></li>
 
 
 
@@ -18,6 +18,9 @@ if(isset(  $_SESSION['userconnect'])) {
     echo '<li><a href="inscription.php">Inscription</a></li>';
     echo '<li><a href="connexion.php">Connexion</a></li>';
 }
+
+
+
 
   ?>
 

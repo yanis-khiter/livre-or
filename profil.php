@@ -49,34 +49,34 @@ else {
     <title>Profil</title>
 
 </head>
-<body class="bodyprofil">
 
-<header>
-    <?php include 'header.php'; ?>
-</header>
+<body class="bodyprof">
 
-        <h1 class="h1profil">Bienvenu sur ton profil !</h1>
+   <?php include 'header.php'; ?>
 
+   <main>
+       
+   <div class="box-p">
+
+    <div class="profi">
+
+        <h1 class="h1profil">Profil !</h1>
+
+        <h2 class ="h2prof"> Bienvenue sur ton profil Clint Eastwood </h2>
     <form  method="post" action="profil.php" class="form" >
-            <table>
 
-                <tr>
-                    <td>Login</td>
-                    <td><input type="text" name="login" value = "<?php echo $_SESSION['userconnect']['login'];?>"></td>
-                </tr>
-                <tr>
-                    <td>Mot de Passe</td>
-                    <td><input type="password" name="password" value = "<?php echo $_SESSION['userconnect']['password'];?>"></td>
-                </tr>
-                <tr>
-                    <td>Confirmer Mot de Passe</td>
-                    <td><input type="password" name="confirmepassword"></td>
-                </tr>
+        <input type="text" name="login" value = "<?php echo $_SESSION['userconnect']['login'];?>" placeholder='Login : "Arthur"' required><br>
+        <input type="password" name="password" value = "<?php echo $_SESSION['userconnect']['password'];?>" placeholder='Mot de passe : *****' required><br>
+        <input type="password" name="confirmepassword" placeholder='Confirmation : *****' required><br>
 
-            </table>
 
-                    <div id="button">
-                    <input type="submit"value="Modifier">
+    <?php
+    echo "<p class='msg'>". $message. '</p>' ;
+    ?>
+           
+
+                    <div id="buttonpro">
+                    <input class="inputpro" type="submit"value="Modifier">
                     </div>  
 
                     
@@ -85,7 +85,7 @@ else {
                     ?>
     </form>
 
-
+</main>
 
 </body>
 </html>

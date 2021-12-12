@@ -8,15 +8,9 @@ commentaires. -->
 
 session_start();
 
-if (isset($_POST['deconnexion'])) {
-
-session_destroy();
-header('location: index.php');
-}
-
-
     require('connect.php');
-    $error = '';
+
+    $message = '';
 
 if (isset($_POST['submit'])) {
 
@@ -26,10 +20,11 @@ if (!empty($_POST['comment'])) {
     $id = $_SESSION['id'];
     $sql = "INSERT INTO commentaires(commentaire, id_utilisateur) VALUES ('$comment', '$id')";
     $requete = mysqli_query($bdd, "INSERT INTO commentaires(commentaire, id_utilisateur) VALUES ('$comment', '$id')");
+
     header('Location: livre-or.php');
 
 } else {
-    $error = 'remplir le champs';
+    $error = 'Veuillez remplir le champ';
 }
 }
 
@@ -38,40 +33,42 @@ if (!empty($_POST['comment'])) {
 <!DOCTYPE html>
 <html>
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css">
 
-    <title>Commentaire</title>
+        <title>Commentaire</title>
 
-</head>
+    </head>
 
-<body class="bodycomm">
-    
-<header>
-    <?php include 'header.php'; ?>
-</header>
+    <body class="bodycomm">
+        
+        <?php include 'header.php'; ?>
 
-    <div class="wrapper">
+            <div class="box-c">
 
-        <form action="" method="POST" class="form">
+                <h1 class="h1com"> Commentaires</h1>
 
-            <div class="row">
+                    <form class="form-com" method="POST">
 
-                <div class="input-group textarea">
-                    <label for="comment">Postes ton commentaire !</label>
-                    <textarea id="comment" name="comment" placeholder="Tapez ici votre commentaire..." required></textarea>
-                </div>
 
-        </form>
+                        <textarea  class="areacom" name="commentaire" placeholder="Votre commentaire..." required></textarea>
 
-        <div class="input-group">
-            <button name="submit" class="btn">Commenter</button>
+                        <div class="buttoncom">
+                        <input class="inputcom" type="submit" value="Poster mon commentaire" name="submit_commentaire" />
+                        </div>
+
+                        <?php
+                        echo "<p class='msg'>". $message. '</p>' ;
+                        ?>
+                
+
+                    </form>
+
             </div>
-            
-    </div>
+    
 
-</body>
+    </body>
 
-</html>
+    </html>

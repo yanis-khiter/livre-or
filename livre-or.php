@@ -20,42 +20,38 @@ require('connect.php');
 
 <body class="bodylivre">
 
-<header>
     <?php include 'header.php'; ?>
-</header>
 
-<main class="container">
+        <main class="container">
 
-<h1 class="h1livre">Livre d'or</h1>
+            <h1 class="h1livre">Livre d'or</h1>
 
-<div class="all-livre">
+                <div class="all-livre">
 
-        <?php
+                    <?php
 
-            $requete = mysqli_query($bdd, "SELECT * FROM commentaires INNER JOIN utilisateurs WHERE utilisateurs.id = commentaires.id_utilisateur
-                ORDER BY commentaires.date DESC");
-            $commentaires = mysqli_fetch_all($requete);
-
-
-            $requete2 = mysqli_query($bdd, "SELECT login FROM utilisateurs INNER JOIN commentaires WHERE
-                commentaires.id_utilisateur = utilisateurs.id");
-            $login = mysqli_fetch_assoc($requete2);
+                    $requete = mysqli_query($bdd, "SELECT * FROM commentaires INNER JOIN utilisateurs WHERE utilisateurs.id = commentaires.id_utilisateur
+                        ORDER BY commentaires.date DESC");
+                    $commentaires = mysqli_fetch_all($requete);
 
 
+                    $requete2 = mysqli_query($bdd, "SELECT login FROM utilisateurs INNER JOIN commentaires WHERE
+                        commentaires.id_utilisateur = utilisateurs.id");
+                    $login = mysqli_fetch_assoc($requete2);
 
-        foreach ($commentaires as $com) : ?>
 
-                    <p class="livreor"><?= $com[1]; ?></p>
-                    
-                    <span><?= $com[5]; ?></span>
-                    <span> le <?= $com[3]; ?></span>
+                    foreach ($commentaires as $com) : ?>
 
-        <?php endforeach; ?>
+                            <p class="livreor"><?= $com[1]; ?></p>
+                            
+                            <span><?= $com[5]; ?></span>
+                            <span> le <?= $com[3]; ?></span>
 
-</div>
+                    <?php endforeach; ?>
 
-    
-</main>
+                </div>
+                
+        </main>
 
 </body>
 </html>

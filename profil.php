@@ -54,38 +54,38 @@ else {
 
    <?php include 'header.php'; ?>
 
-   <main>
+        <main>
        
-   <div class="box-p">
+            <div class="box-p">
 
-    <div class="profi">
+                <div class="profi">
 
-        <h1 class="h1profil">Profil !</h1>
+                        <h1 class="h1profil">Profil !</h1>
+                        <h2 class ="h2prof"> Bienvenue sur ton profil Clint Eastwood </h2>
 
-        <h2 class ="h2prof"> Bienvenue sur ton profil Clint Eastwood </h2>
-    <form  method="post" action="profil.php" class="form" >
+                                 <form  method="post" action="profil.php" class="form" >
 
-        <input type="text" name="login" value = "<?php echo $_SESSION['userconnect']['login'];?>" placeholder='Login : "Arthur"' required><br>
-        <input type="password" name="password" value = "<?php echo $_SESSION['userconnect']['password'];?>" placeholder='Mot de passe : *****' required><br>
-        <input type="password" name="confirmepassword" placeholder='Confirmation : *****' required><br>
+                                    <input type="text" name="login" value = "<?php echo $_SESSION['userconnect']['login'];?>" placeholder='Login : "Arthur"' required><br>
+                                    <input type="password" name="password" value = "<?php echo $_SESSION['userconnect']['password'];?>" placeholder='Mot de passe : *****' required><br>
+                                    <input type="password" name="confirmepassword" placeholder='Confirmation : *****' required><br>
 
 
-    <?php
-    echo "<p class='msg'>". $message. '</p>' ;
-    ?>
+                                    <?php
+                                    echo "<p class='msg'>". $message. '</p>' ;
+                                    ?>
            
 
-                    <div id="buttonpro">
-                    <input class="inputpro" type="submit"value="Modifier">
-                    </div>  
+                                    <div id="buttonpro">
+                                    <input class="inputpro" type="submit"value="Modifier">
+                                    </div> 
 
-                    
-                    <?php
-                    echo "<p class='msg'>". $message. '</p>' ;
-                    ?>
-    </form>
+                                </form>
+                                    
+                </div>
 
-</main>
+            </div>
+
+        </main>
 
 </body>
 </html>

@@ -20,14 +20,13 @@ if(isset($_POST['login'])&& isset($_POST['password'])){
   $login = $_POST['login']; 
   $password = $_POST['password']; 
 
-
   $requete = mysqli_query($bdd, "SELECT * FROM utilisateurs WHERE login = '$login' && password = '$password'");
 
   $resultat= mysqli_fetch_assoc($requete);
 
 if(!empty($resultat)) {
 
-  $_SESSION['userconnect']=[
+    $_SESSION['userconnect']=[
       'id'  => $resultat['id'],
       'login' => $resultat['login'],
       'password' => $resultat['password'],

@@ -19,23 +19,21 @@ $password = $_POST['password'];
 $password_confirme = $_POST['confirmepassword'];
 
 
-$requete = mysqli_query($bdd, "SELECT * FROM utilisateurs WHERE login = '$login'");
+    $requete = mysqli_query($bdd, "SELECT * FROM utilisateurs WHERE login = '$login'");
+    
+    $resultat = mysqli_fetch_all($requete);
 
+            if ($password != $password_confirme) {
+                $message = 'Les deux mots de passes ne sont pas identique'; } 
 
-  
-$resultat = mysqli_fetch_all($requete);
+            elseif (count($resultat) != 0){
+                $message='Login déjà pris !'; } 
 
-    if ($password != $password_confirme) {
-        $message = 'Les deux mots de passes ne sont pas identique'; } 
-
-    elseif (count($resultat) != 0){
-        $message='Login déjà pris !'; } 
-
-    else {
+            else {
 
     $requete = mysqli_query($bdd, "INSERT INTO utilisateurs(login, password) VALUES ('$login','$password') ");
 
-   header('Location: connexion.php');
+    header('Location: connexion.php');
 
 }
 }
@@ -51,45 +49,43 @@ $resultat = mysqli_fetch_all($requete);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscription</title>
     <link rel="stylesheet" type="text/css" href="style.css"> 
-</head>
 
+</head>
 
 <body class="bodyinscri">
 
 <?php include 'header.php'; ?>
 
-<main>
+    <main>
 
-<div class="box-a">
-    <div class="boxy">
-        <h1 class="h1inscri">Inscription</h1>
-            <h2 class="h2inscri">Je te laisse t'inscrire Cow-Boy ! </h2>
-                
-                <form method="post" action="inscription.php" class="form-inscri" >
+        <div class="box-a">
 
-                    <input type="text" name="login" placeholder='Login : "Arthur"' required><br>
-                    <input type="password" name="password" placeholder='Mot de passe : *****' required><br>
-                    <input type="password" name="confirmepassword" placeholder='Confirmation : *****' required><br>
+            <div class="boxy">
 
+                <h1 class="h1inscri">Inscription</h1>
+                <h2 class="h2inscri">Je te laisse t'inscrire Cow-Boy ! </h2>
+                    
+                    <form method="post" action="inscription.php" class="form-inscri" >
+
+                        <input type="text" name="login" placeholder='Login : "Arthur"' required><br>
+                        <input type="password" name="password" placeholder='Mot de passe : *****' required><br>
+                        <input type="password" name="confirmepassword" placeholder='Confirmation : *****' required><br>
 
                         <?php
                         echo "<p class='msg'>". $message. '</p>' ;
                         ?>
 
-
                         <div id="buttoninscri">
                         <input class="inputinscri" type="submit" value="S'inscrire">
                         </div> 
 
-                 </form>
+                    </form>
 
-            
-    </div>
-</div>
+            <div>
 
-   
+        </div>
 
-</main>           
+    </main>           
 
 </body>
 </html> 

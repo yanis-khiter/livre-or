@@ -18,13 +18,12 @@ if (!empty($_POST['comment'])) {
     $comment = $_POST['comment'];
 
     $id = $_SESSION['id'];
-    $sql = "INSERT INTO commentaires(commentaire, id_utilisateur) VALUES ('$comment', '$id')";
-    $requete = mysqli_query($bdd, "INSERT INTO commentaires(commentaire, id_utilisateur) VALUES ('$comment', '$id')");
+    $requete = mysqli_query($bdd, "INSERT INTO commentaires(id,commentaire, id_utilisateur) VALUES (NULL, '$comment', '$id')");
 
     header('Location: livre-or.php');
 
 } else {
-    $error = 'Veuillez remplir le champ';
+    $message = 'Veuillez remplir le champ';
 }
 }
 
@@ -50,22 +49,22 @@ if (!empty($_POST['comment'])) {
 
                 <h1 class="h1com"> Commentaires</h1>
 
-                    <form class="form-com" method="POST">
+                <form method ="post" action = "commentaire.php" class="form-com" >
 
+                    <textarea  class="areacom" name="comment"  placeholder="Dis-moi tout cow-boy ..." required></textarea>
 
-                        <textarea  class="areacom" name="commentaire" placeholder="Votre commentaire..." required></textarea>
+                    <div class="buttoncom">
+                    <input class="inputcom" type="submit" value="Commenter" name="submit" action="post" required/>
+                    </div>
 
-                        <div class="buttoncom">
-                        <input class="inputcom" type="submit" value="Poster mon commentaire" name="submit_commentaire" />
-                        </div>
+                    <div class="message">
+                    <?php
+                    echo "<p class='msg'>". $message. '</p>' ;
+                    ?>
+                    </div>
 
-                        <?php
-                        echo "<p class='msg'>". $message. '</p>' ;
-                        ?>
-                
-
-                    </form>
-
+                </form>
+            
             </div>
     
 

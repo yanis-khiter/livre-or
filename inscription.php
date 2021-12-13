@@ -71,9 +71,11 @@ $password_confirme = $_POST['confirmepassword'];
                         <input type="password" name="password" placeholder='Mot de passe : *****' required><br>
                         <input type="password" name="confirmepassword" placeholder='Confirmation : *****' required><br>
 
+                        <div class="message">
                         <?php
                         echo "<p class='msg'>". $message. '</p>' ;
                         ?>
+                        </div>
 
                         <div id="buttoninscri">
                         <input class="inputinscri" type="submit" value="S'inscrire">

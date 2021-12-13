@@ -63,16 +63,18 @@ else {
                         <h1 class="h1profil">Profil !</h1>
                         <h2 class ="h2prof"> Bienvenue sur ton profil Clint Eastwood </h2>
 
-                                 <form  method="post" action="profil.php" class="form" >
+                                 <form class="form-pro"  method="post" action="profil.php" class="form" >
 
                                     <input type="text" name="login" value = "<?php echo $_SESSION['userconnect']['login'];?>" placeholder='Login : "Arthur"' required><br>
                                     <input type="password" name="password" value = "<?php echo $_SESSION['userconnect']['password'];?>" placeholder='Mot de passe : *****' required><br>
                                     <input type="password" name="confirmepassword" placeholder='Confirmation : *****' required><br>
 
 
+                                    <div class="message">
                                     <?php
                                     echo "<p class='msg'>". $message. '</p>' ;
                                     ?>
+                                    </div>
            
 
                                     <div id="buttonpro">

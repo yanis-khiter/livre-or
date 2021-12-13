@@ -19,11 +19,14 @@
 
         <div class="h2ind">
 
-                <h2 class="h2index">Prêt à chevaucher mon livre d'or à travers les plaines du far-west ? </h2>
-                <h2 class="h2index">Pour cela : <a class="a-index" href="inscription.php"> Inscris-toi.</a> 
-                Si c'est déjà fait : <a class="a-index" href="connexion.php">Connectes-toi !</a></h2>
+                <em><h2 class="h2index">Prêt à chevaucher mon livre d'or à travers les plaines du Far-West ? </h2></em> 
+
         </div>
 
+        <a href="https://github.com/yanis-khiter/">
+        <img class="icongit" src="https://img.icons8.com/nolan/50/github.png"/></a>
+
+        
 
 </body>
 </html>

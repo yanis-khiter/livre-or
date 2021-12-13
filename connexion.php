@@ -87,10 +87,13 @@ $message = '<br>'.'Utilisateur inconnu ! '; }
 
             <input type="text" name="login" placeholder='Login : "Arthur"' required><br>
             <input type="password" name="password" placeholder='Mot de passe : *****' required><br>
-        
-                <?php
-                echo "<p class='msg'>". $message. '</p>' ;
-                ?>
+            
+            <div class="message">
+                
+                    <?php
+                    echo "<p class='msg'>". $message. '</p>' ;
+                    ?>
+                    </div>
 
             <div id="buttoncon">
             <input class="inputconni" type="submit"value="Se connecter">

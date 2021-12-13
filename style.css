@@ -112,7 +112,7 @@ text-shadow: 2px 2px 6px #00000040;
 }
 
 
-form {
+.form-inscri {
 background: rgba(0, 0, 0, 0.3);
 padding: 3rem;
 height: 200px;
@@ -239,6 +239,14 @@ background: url(cb.jpg);
 background-size: cover;
 }
 
+.form-pro {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 3rem;
+    height: 200px;
+    text-align: center;
+    border-radius: 30px;
+    }
+
 .box-p {
 margin-top: 4%;
 margin-right: 8%;
@@ -290,6 +298,7 @@ margin-top: 18%;
 color: rgb(184, 52, 52);
 font-family: Impact;
 font-size: 20px;
+
 }
 
 
@@ -330,17 +339,16 @@ background: url(lands.webp);
 background-size: cover;
 }
 
-.form-com {
-background: rgba(0, 0, 0, 0.3);
-padding: 3rem;
-height: 145px;
-text-align: center;
-border-radius: 30px;
-}
-
 .h1com {
 margin-top: 5%;
+text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff, 1px 1px 10px #141414;
+color: rgb(73, 68, 66);
+font-size: 40px;
+font-family: 'tahoma';
+margin-top: 5%;
+text-align: center;
 }
+
 
 .box-c {
 text-align: center;
@@ -356,7 +364,40 @@ margin-top: 5%;
 }
 
 .areacom {
-
+width: 50%;
+height: 200px;
+box-sizing: border-box;
+color: rgb(255, 255, 255);
+border-radius: 4px;
+background-color: rgba(0, 0, 0,0.5);
+border-color:rgb(255, 255, 255);
+font-size: 10px;
+resize: none;
+margin-top: 2%;
+font-size: 25px;
 }
 
 
+.icongit {
+margin-top: 21%;
+margin-left: 48%;
+}
+
+.icongit:hover {
+transform: scale(1.4, 1.4);
+transition: 1.3s;   
+}
+
+
+.inputcom {
+color: rgb(255, 255, 255);
+font-family: Impact;
+font-size: 20px;
+}
+
+.message {
+color:red;
+font-size: 20px;
+font-family: impact;
+font-style: italic  ;
+}

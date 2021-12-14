@@ -18,7 +18,7 @@ if (!empty($_POST['comment'])) {
     $comment = $_POST['comment'];
 
     $id = $_SESSION['id'];
-    $requete = mysqli_query($bdd, "INSERT INTO commentaires(id,commentaire, id_utilisateur) VALUES (NULL, '$comment', '$id')");
+    $requete = mysqli_query($bdd, "INSERT INTO commentaires(id,commentaire, id_utilisateur, date) VALUES (NULL, '$comment', '$id', NOW())");
 
     header('Location: livre-or.php');
 
